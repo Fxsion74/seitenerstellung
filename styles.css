@@ -1,0 +1,55 @@
+/*
+Theme Name: WebStudio Pro
+Description: Premium WordPress Theme für WebStudio Pro
+Version: 1.0.0
+Author: WebStudio Pro
+*/
+
+/* Theme wird hauptsächlich über animations.css gesteuert */
+@import url('./assets/css/animations.css');
+
+/* Basis WordPress Styles */
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption-text {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+/* WordPress Block Editor Compatibility */
+.wp-block-image {
+    margin: 2rem 0;
+}
+
+.wp-block-quote {
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+    margin: 2rem 0;
+    font-style: italic;
+}

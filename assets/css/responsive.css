@@ -1,0 +1,253 @@
+/* Responsive Design für WebStudio Pro */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero h1 {
+        font-size: 8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop */
+@media (max-width: 1199px) {
+    .hero h1 {
+        font-size: 6rem;
+    }
+    
+    .about-content {
+        gap: 3rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .portfolio-item {
+        min-width: 400px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    section {
+        padding: 6rem 1.5rem;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-item {
+        min-width: 300px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+    
+    .floating-card {
+        display: none;
+    }
+    
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+    
+    section {
+        padding: 4rem 1rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 575px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero {
+        padding: 0 1rem;
+    }
+    
+    .about-visual {
+        height: 300px;
+    }
+    
+    .morph-blob {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+    
+    .contact-form {
+        gap: 1.5rem;
+    }
+    
+    .form-submit {
+        padding: 1.2rem 2rem;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .post-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ultra Small Mobile */
+@media (max-width: 374px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .mobile-nav-links a {
+        font-size: 1.5rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .morph-blob {
+        filter: blur(0.25px);
+    }
+    
+    .particle {
+        filter: blur(0.25px);
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .main-content {
+        background: var(--dark);
+        color: white;
+    }
+    
+    .post-card {
+        background: rgba(255,255,255,0.05);
+        color: white;
+    }
+    
+    .post-title a {
+        color: white;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .morph-blob {
+        animation: none;
+    }
+    
+    .particle {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .cursor,
+    .cursor-follower,
+    .particles,
+    .floating-card,
+    nav,
+    .mobile-menu-overlay,
+    footer {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .hero {
+        background: white !important;
+        color: black !important;
+        height: auto !important;
+        padding: 2rem 0 !important;
+    }
+    
+    section {
+        padding: 2rem 0 !important;
+        page-break-inside: avoid;
+    }
+}
